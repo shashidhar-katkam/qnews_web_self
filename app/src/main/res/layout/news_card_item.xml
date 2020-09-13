@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/card_view"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="@dimen/layout_margin_5"-->
+    <!--        android:clickable="true"-->
+    <!--        android:focusable="true"-->
+    <!--        android:foreground="?android:attr/selectableItemBackground"-->
+    <!--        card_view:cardCornerRadius="@dimen/card_corner_radius">-->
+
+    <!--        android:orientation="vertical">-->
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/border_image"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.016"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:srcCompat="@drawable/border_image" />
+
+    <TextView
+        android:id="@+id/textUser"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="1dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="start"
+        android:text=""
+        android:textAlignment="inherit"
+        android:textColor="#385898"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        card_view:layout_constraintBottom_toTopOf="@+id/imageView"
+        card_view:layout_constraintEnd_toStartOf="@+id/imageShare"
+        card_view:layout_constraintHorizontal_bias="0.38"
+        card_view:layout_constraintStart_toStartOf="@+id/imageView"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintVertical_bias="0.38" />
+
+    <ImageView
+        android:id="@+id/imageShare"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="TODO"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:srcCompat="@drawable/ic_share_blan" />
+
+    <TextView
+        android:id="@+id/textTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="140dp"
+        android:text=""
+
+        card_view:layout_constraintEnd_toEndOf="@+id/imageShare"
+        card_view:layout_constraintHorizontal_bias="0.23"
+        card_view:layout_constraintStart_toStartOf="@+id/imageView"
+        card_view:layout_constraintTop_toBottomOf="@+id/textUser"
+        card_view:layout_constraintVertical_bias="0.13999999" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="10dp"
+        android:paddingRight="20dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.10"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/textUser" />
+
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="1dp"
+        android:paddingRight="20dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="16sp"
+        card_view:layout_constraintHorizontal_bias="0.10"
+        card_view:layout_constraintStart_toStartOf="@+id/textTitle"
+        card_view:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+    <ImageView
+        android:id="@+id/newsImage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toStartOf="parent"
+        card_view:layout_constraintStart_toEndOf="@+id/textDescription"
+        card_view:layout_constraintTop_toBottomOf="@+id/textDescription"
+        android:visibility="gone"
+        tools:visibility="gone"
+        />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        tools:visibility="gone"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="1.0"
+        card_view:layout_constraintStart_toEndOf="@+id/textDescription"
+        card_view:layout_constraintTop_toBottomOf="@+id/textDescription"
+        />
+
+    <WebView
+        android:id="@+id/videoWebView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:visibility="gone"
+        card_view:layout_constraintStart_toEndOf="@+id/textDescription"
+        card_view:layout_constraintTop_toBottomOf="@+id/textDescription"
+        tools:visibility="gone"></WebView>
+
+
+    <!--    </androidx.cardview.widget.CardView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

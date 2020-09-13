@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="h"/>
+    <item
+        android:id="@+id/live_1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_live_tv_24"
+        android:title="l"/>
+    <item
+        android:id="@+id/trending_1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_trending_up_24"
+        android:title=""/>
+    <item
+        android:id="@+id/compose_1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title=""/>
+    <item
+        android:id="@+id/user_1"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title=""/>
+
+</menu>
